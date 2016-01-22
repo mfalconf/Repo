@@ -1,0 +1,6 @@
+workaround para solucionar el problema entre Atmel studio 7 y la actualizacion de Visual Studio 2015
+Opcion 1:
+http://www.avrfreaks.net/forum/fix-visual-studio-2015-update-1-breaks-atmel-studio-7
+
+Opcion 2:
+http://atmel.force.com/support/articles/en_US/Workaround/Installing-Visual-Studio-2015-Update-1-leads-to-Atmel-Studio-no-longer-starting
