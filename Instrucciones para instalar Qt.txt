@@ -1,0 +1,43 @@
+Instucciones para instalacion de las libs de QT de la version de QT5 usando el codigo fuente y visual studio 2015
+
+1- Bajar el codigo fuente y copiarlo a C:\qt\qt5
+2- Instalar el compilador C++ de visual studio, o instalar el Visual Studio C++
+3- Instalar el SDK para la version de windows correspondiente
+4- Instalar las aplicaciones
+  - python
+  - ActivePerl
+  - Ruby para windows (rubyinstaller)
+  
+5- Setear las variables de entorno correspondientes
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat amd64
+SET _ROOT=C:\qt\qt5
+SET PATH=%_ROOT%\qtbase\bin;%_ROOT%\gnuwin32\bin;%PATH%
+SET QMAKESPEC=win32-msvc2015
+SET _ROOT=
+
+6- c:\qt\qt5\configure -debug -nomake examples -opensource
+
+7- nmake
+
+NOTA:
+http://doc.qt.io/qt-5/windows-building.html
+
+Instucciones para instalar QT-creator
+
+IMPORTANTE: No cerrar la ventana de terminal previamente abierta para instalar las libs anteriores
+
+1- Bajar QT-creator desde el repositorio de Github: https://github.com/qtproject/qt-creator
+2- Crear el directorio C:\qt\qt5\qt-creator\qt-creator
+3- Crear en el directorio C:\qt\qt5\qt-creator\q-creator-build
+4- Copiar el contenido repositorio en el directorio en C:\qt\qt5\qt-creator\qt-creator
+5- ingresar al directorio qt-creator-build y poner: qmake -r ../qt-creator/qtcreator.pro
+6- Luego hacer nmake
+7- Agregar la variable de entorno PATH en propiedades del sistema->Variable de entorno->Variables del sistema 
+8- Ir al directorio C:\qt\qt5\qt-creator\q-creator-build y darle al boton derecho actualizar, y nuevamente actualizar.
+
+NOTAS
+1- Para ejecutarlo entrar a la consola y ejecutar c:\qt\qt5\qt-creator\q-creator-build\bin\qtcreator
+2- Agregar el parametro de Qt version si no lo detecta automaticamente segun
+   http://doc.qt.io/qtcreator/creator-targets.html
+   http://doc.qt.io/qtcreator/creator-project-qmake.html
+
